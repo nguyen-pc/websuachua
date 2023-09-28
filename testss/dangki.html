@@ -38,23 +38,23 @@
     </header>
     
     <main style="margin-top: 90px;">
-        <div style="margin-top: 30px;">
+        <div style="margin-top: 30px; margin-bottom: 30px;">
              <h1 class="title_1">ĐĂNG KÝ</h1>
-            <table>
-                <tr >
-                    <td><label for="id">Email</label></td>
+            <table  style="margin-left: 250px;">
+                <tr  >
+                    <td style="width: 20px;"><i class="lh-address-icon-gy fa-regular fa-envelope"></i></td>
                     <td><input name="email" type="text" placeholder="Vui lòng nhập Email"/></td>
                 </tr>
                 <tr >
-                    <td><label for="id">Mật Khẩu</label></td>
+                    <td><label for="id"><i class="lh-address-icon-gy fa-solid fa-key"></i></label></td>
                     <td><input name="psw" type="text" placeholder="Vui lòng nhập mật khẩu"/></td>
                 </tr>
                 <tr >
-                    <td><label for="id">Nhập lại mật khẩu</label></td>
+                    <td><label for="id"><i class="lh-address-icon-gy fa-solid fa-key"></i></label></td>
                     <td><input type="text" name="psw2" placeholder="Vui lòng nhập lại mật khẩu"/></td>
                 </tr>
                 <tr >
-                    <td><label for="id">Cấp độ thành viên<label></td>
+                    <td><label for="id"><i class="lh-address-icon-gy fa-solid fa-users-rectangle"></i><label></td>
                     <td>
                         <input type="radio" name="memberType" >Bạc</input> 
                         <input type="radio"  name="memberType"> Vàng</input> 
@@ -62,17 +62,18 @@
                     </td>
                 </tr>
                 <tr >
-                    <td><label for="id">Ảnh đại diện<label></td>
+                    <td><label for="id"><i class="lh-address-icon-gy fa-regular fa-image"></i><label></td>
                     <td>
                         <input type="file">
                     </td>
                 </tr>
 
                 <tr >
-                    <td colspan="2">Thông qua việc tạo tài khoản, bạn đồng ý với <a href="./">Điều khoản & Quyền riêng tư của chúng tôi.</a> </td>
+                    <td colspan="2">Thông qua việc tạo tài khoản, bạn đồng ý với <a href="./">Điều khoản <div>& Quyền riêng tư của chúng tôi.</div></a> </td>
+                    
                 </tr>
                 <tr >
-                    <td >
+                    <td style="display: flex;">
                         <input type="reset" value="Hủy" /> 
                         <input type="submit" value="Đăng kí" method='post' enctype="application/x-www-form-urlencoded"/>
                     </td>
