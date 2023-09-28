@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Liên hệ</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+        <!-- <link href="images/favicon.ico" rel="shortcut icon" type="images/vnd.microsoft.icon" /> -->
+    </head>
+<body>
+    <header>
+        <a ><img id="logo" src="./images/logo.png" id="logo" /></a>
+        <img class="header-img1" src="../assets/header/header-img1.png"/>
+        <img class="header-img2" src="../assets/header/header-img2.png"/>
+        <img class="header-img3" src="../assets/header/header-img3.png"/>
+        <nav style="display: flex;">
+            <a class="button" href="trangchu.html">Trang Chủ</a>
+            <a class="button" href="gioithieu.html">Giới Thiệu</a>
+            <a class="button" href="sanpham.html">Sản Phẩm</a>
+            <a class="button" href="tintuc.html">Tin Tức</a>
+            <a class="button" href="dangnhap.html">Đăng Nhập</a>
+            <a class="button" href="dangki.html">Đăng Kí</a>
+            <a class="button" href="lienhe.html">Liên Hệ</a>
+
+            <div style="margin-left:  70px;" class="input">
+                <input class="input" placeholder="Nhập nội dung cần tìm..."/>
+                <i  class="fa-solid fa-magnifying-glass search"></i>
+                <i class="fa-solid fa-cart-shopping cart"></i>
+    
+            </div>
+        </nav>
+
+       
+
+    </header>
+    
+    <main style="margin-top: 90px;">
+        <div style="margin-top: 30px;">
+             <h1 class="title_1">ĐĂNG KÝ</h1>
+            <table>
+                <tr >
+                    <td><label for="id">Email</label></td>
+                    <td><input name="email" type="text" placeholder="Vui lòng nhập Email"/></td>
+                </tr>
+                <tr >
+                    <td><label for="id">Mật Khẩu</label></td>
+                    <td><input name="psw" type="text" placeholder="Vui lòng nhập mật khẩu"/></td>
+                </tr>
+                <tr >
+                    <td><label for="id">Nhập lại mật khẩu</label></td>
+                    <td><input type="text" name="psw2" placeholder="Vui lòng nhập lại mật khẩu"/></td>
+                </tr>
+                <tr >
+                    <td><label for="id">Cấp độ thành viên<label></td>
+                    <td>
+                        <input type="radio" name="memberType" >Bạc</input> 
+                        <input type="radio"  name="memberType"> Vàng</input> 
+                        <input type="radio"  name="memberType"> Bạch kim</input> 
+                    </td>
+                </tr>
+                <tr >
+                    <td><label for="id">Ảnh đại diện<label></td>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+
+                <tr >
+                    <td colspan="2">Thông qua việc tạo tài khoản, bạn đồng ý với <a href="./">Điều khoản & Quyền riêng tư của chúng tôi.</a> </td>
+                </tr>
+                <tr >
+                    <td >
+                        <input type="reset" value="Hủy" /> 
+                        <input type="submit" value="Đăng kí" method='post' enctype="application/x-www-form-urlencoded"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </main>
+    
+    <footer style="display: flex; padding: 10px 0;">
+        <p style="margin-left: 250px;">&copy;2021 Bản quyền thuộc về FreeezeVN. <a href=""><i class="face fa-brands fa-facebook"></i></a> <a href=""><i class="face fa-brands fa-twitter"></i></a> <a href=""><i class=" face fa-brands fa-pinterest"></i></a> </p>
+        <a href="#logo"> <img class="top" src="../assets/header/top.png" /></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./assets/favicon.ico" rel="icon"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
+    <title>Freeze</title>
+</head>
+<body class="grid wide">
+    <header style="border: 1px solid rgb(181, 180, 180); border-radius: 4px;" class="header ">
+        <nav class="header_nav">
+            <div class="col-1 header_nav-image">
+                <img class="nav_image-logo" src="./assets/logo.png">
+                <div class="nav_image-sanpham">
+                    <img class="nav_image" src="./assets/header/header-img1.png"/>
+                    <img class="nav_image" src="./assets/header/header-img2.png"/>
+                    <img class="nav_image-spe" src="./assets/header/header-img3.png"/>
+                </div>
+               
+            </div>
+            <div class="header_nav-text">
+                <div class="header_nav-button">
+                    <button class="header_button">
+                        <a>Trang chủ</a>
+                    </button>
+                    <button class="header_button">
+                        <a>Giới thiệu</a>
+                    </button>
+                    <button class="header_button">
+                        <a>Sản phẩm</a>
+                    </button>
+                    <button class="header_button">
+                        <a>Tin tức</a>
+                    </button>
+                    <button class="header_button">
+                        <a>Đăng nhập</a>
+                    </button>
+                    <button class="header_button">
+                        <a>Đăng kí</a>
+                    </button>
+                    <button class="header_button">
+                        <a>Liên hệ</a>
+                    </button>
+                </div>
+                <div class="header_nav-search">
+                    <input class="header_input" placeholder="Nhập nội dung cần tìm" />
+                    <div class="header_icon">
+                        <i class="icon_search fa-solid fa-magnifying-glass"></i>
+                    </div>
+                   
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 60px; border: 1px solid rgb(207, 203, 203); border-radius: 3px;" >
+        <div style="color: red; font-weight: 500; font-size: 1.8rem; text-align: center; margin-top: 25px;">ĐĂNG KÍ</div>
+       
+        <div>
+            <div style="margin-left: 300px;">
+                <i style="font-size: 1.8rem; " class="fa-regular fa-envelope"></i>
+                <input style="height: 20px; padding-left: 10px; padding-right: 20px; outline: none; border-radius: 4px;" placeholder="Vui lòng nhập email"/>
+            </div>
+            
+            <div style="margin-left: 300px;">
+                <i  style="font-size: 1.8rem; "  class="fa-solid fa-key"></i>
+                <input  style="height: 20px; padding-left: 10px; padding-right: 20px; outline: none; border-radius: 4px;" placeholder="Vui lòng nhập lại mật khẩu"/>
+            </div>
+
+            <div style="margin-left: 300px;">
+                <i  style="font-size: 1.8rem; "  class="fa-solid fa-key"></i>
+                <input  style="height: 20px; padding-left: 10px; padding-right: 20px; outline: none; border-radius: 4px;" placeholder="Nhập lại mật khẩu"/>
+            </div>
+
+            <div style="margin-left: 300px; display: flex; font-size: 1.3rem; margin-top: 10px;">
+                <i style="font-size: 1.8rem; margin-right: 4px; "  class="fa-solid fa-users-line"></i>
+                <div style="margin-top: 10px;">
+                    <input  type="radio" name="Bạc"> Bạc
+                    <input type="radio" name="Vang"> Vàng
+                    <input type="radio" name="BachKim"> Bạch Kim
+                </div>
+            </div>
+
+            <div style="margin-left: 300px; margin-top: 10px;">
+                <i  style="font-size: 1.8rem; margin-right: 8px;"  class="fa-regular fa-file"></i>
+                <input style="padding: 10px 10px;" type="file"/>
+            </div>
+
+        </div>
+        <div style="display: flex; margin-left: 300px; margin-top: 15px;">
+            <div style="font-size: 1.5rem; margin-right: 250px;">Thông qua việc tạo tài khoản, bạn đã đồng ý với <a style="color: blue;text-decoration: underline;">Điều khoản & Quyền riêng tư của chúng tôi.</a></div>
+          
+        </div>
+
+        <div style="margin-left: 300px; margin-top: 10px; margin-bottom: 20px;">
+            <button style="padding: 5px ;">Đăng kí</button>
+            <button style="padding: 5px 10px 5px 10px;">Hủy</button>
+        </div>
+    </main>
+
+    <footer style="border: 1px solid rgb(181, 180, 180); margin-top: 3px; border-radius: 4px;">
+        <div style="display: flex; justify-content: space-between; ">
+            <div style="padding-top: 10px; margin-left: 400px;">&copy; 2023 Bản quyền thuộc về Thanh Nguyên <i style="color: rgb(222, 82, 82);" class="fa-brands fa-facebook"></i> <i style="color: rgb(222, 82, 82);" class="fa-brands fa-tiktok"></i> <i style="color: rgb(222, 82, 82);" class="fa-brands fa-instagram"></i></div>
+            <img style="width: 40px; height: 40px;" src="./assets/header/top.png" />
+        </div>
+        
+    </footer>
+</body>
+</html>
