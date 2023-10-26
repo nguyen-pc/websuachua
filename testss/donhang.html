@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Đơn hàng</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+    <!-- <link href="images/favicon.ico" rel="shortcut icon" type="images/vnd.microsoft.icon" /> -->
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    </style>
+        
+
+</head>
+<body>
+    <header>
+        <a ><img id="logo" src="./images/logo.png" id="logo" /></a>
+        <img class="header-img1" src="../assets/header/header-img1.png"/>
+        <img class="header-img2" src="../assets/header/header-img2.png"/>
+        <img class="header-img3" src="../assets/header/header-img3.png"/>
+        <nav style="display: flex;">
+            <a class="button" href="trangchu.html">Trang Chủ</a>
+            <a class="button" href="gioithieu.html">Giới Thiệu</a>
+            <a class="button" href="sanpham.html">Sản Phẩm</a>
+            <a class="button" href="tintuc.html">Tin Tức</a>
+            <a class="button" href="dangnhap.html">Đăng Nhập</a>
+            <a class="button" href="dangki.html">Đăng Kí</a>
+            <a class="button" href="lienhe.html">Liên Hệ</a>
+
+            <div style="margin-left:  70px; display: flex;" class="input">
+                <form method="GET" action="timkien.html" id="sendform">
+                    <input type="text" id="searchInput" class="input" placeholder="Nhập nội dung cần tìm..."/>
+                
+                </form>
+                <button style="width: 35px;height: 26px;margin-left: 5px; margin-right: 10px; background-color: #cddc39;">
+                    <i style="color: #fff;" class="fa-solid fa-magnifying-glass "></i>
+                </button>
+                <button onclick="showCart()" type="submit" style="width: 35px;height: 26px; background-color: #cddc39;">
+                    <i  style="color: #ed4190;" class="fa-solid fa-cart-shopping "></i>
+                </button>
+                <!-- <button style=" 
+                    width: 40px;
+                    height: 30px;
+                    margin-right: 10px;
+                    margin-left: 10px;"
+                >
+                    <i  class="fa-solid fa-magnifying-glass search"></i>
+                </button>
+               <button style=" 
+                    width: 40px;
+                    height: 30px;
+                    margin-right: 10px;
+                    margin-left: 10px;"
+                >
+                <i class="fa-solid fa-cart-shopping cart"></i>
+               </button> -->
+                
+            </div>
+        </nav>
+
+       
+
+    </header>
+    
+    <main>
+        <div class="title_1">CHI TIẾT ĐƠN HÀNG</div>
+
+        <table>
+            <thead>
+              <tr>
+                <th>Hình SP</th>
+                <th>Tên SP</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Thành tiền</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="id_product">
+              <tr id="id_info">
+                <td id="id_image"></td>
+              </tr>
+
+              <tr>
+    
+              </tr>
+              </tbody>
+            </tbody>
+          </table>
+
+          <diV style="display: flex; justify-content: center;">
+            <button style="margin-top: 10px; padding: 5px 0;">Xác nhận đơn hàng</button>
+          </diV>
+    </main>
+    <footer style="display: flex; padding: 10px 0;">
+        <p style="margin-left: 250px;">&copy;2021 Bản quyền thuộc về FreeezeVN. <a href=""><i class="face fa-brands fa-facebook"></i></a> <a href=""><i class="face fa-brands fa-twitter"></i></a> <a href=""><i class=" face fa-brands fa-pinterest"></i></a> </p>
+        <a href="#logo"> <img class="top" src="../assets/header/top.png" /></a>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

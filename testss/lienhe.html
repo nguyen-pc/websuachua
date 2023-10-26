@@ -25,11 +25,17 @@
             <a class="button" href="dangki.html">Đăng Kí</a>
             <a class="button" href="lienhe.html">Liên Hệ</a>
 
-            <div style="margin-left:  70px;" class="input">
-                <input class="input" placeholder="Nhập nội dung cần tìm..."/>
-                <i  class="fa-solid fa-magnifying-glass search"></i>
+            <div style="margin-left:  70px; display: flex;" class="input">
+                <form>
+                    <input class="input" placeholder="Nhập nội dung cần tìm..."/>
+                </form>
+                <div>
+                    <i  class="fa-solid fa-magnifying-glass search"></i>
+                </div>
+               <div>
                 <i class="fa-solid fa-cart-shopping cart"></i>
-    
+               </div>
+                
             </div>
         </nav>
 
@@ -50,11 +56,11 @@
             <table  style="margin-left: 250px;">
                 <tr >
                     <td style="width: 20px;"><label for="id"><i class="lh-address-icon-gy fa-regular fa-user"></i></label></td>
-                    <td><input name="hoten" type="text" placeholder="Vui lòng nhập họ tên của bạn"/></td>
+                    <td><input id="namelogin" name="hoten" type="text" placeholder="Vui lòng nhập họ tên của bạn"/></td>
                 </tr>
                 <tr >
                     <td> <label for="id"><i class="lh-address-icon-gy fa-regular fa-envelope"></i></label> </td>
-                    <td> <label for="id"><input name="psw" type="text" placeholder="Vui lòng nhập địa chỉ email"/></label></td>
+                    <td> <label for="id"><input id="emaillogin" name="psw" type="email" placeholder="Vui lòng nhập địa chỉ email"/></label></td>
                 </tr>
             
                 <tr >
@@ -68,13 +74,13 @@
                     </td>
                 </tr>
                 <tr >
-                    <td  colspan="2"><label for="id"><textarea style="margin-left: 50px;" rows="7" cols="50">Nội dung cần liên hệ</textarea></label></td>
+                    <td  colspan="2"><label for="id"><textarea id="contact" style="margin-left: 50px;" rows="7" cols="50">Nội dung cần liên hệ</textarea></label></td>
                 </tr>
                 <tr >
                     <td><label for="id"><i style="margin-bottom: 20px;" class="lh-address-icon-gy-paper lh-address-icon-gy fa-regular fa-file"></i></label></td>
                 </tr>
                 <tr >
-                    <th colspan="1"> <input type="submit" value="Gửi"  method='post' enctype="application/x-www-form-urlencoded"/></th>
+                    <th colspan="1"> <input onclick="sendContact()" type="submit" value="Gửi"  method='post' enctype="application/x-www-form-urlencoded"/></th>
                 </tr>
             </table>
         </div>
@@ -84,5 +90,7 @@
         <p style="margin-left: 250px;">&copy;2021 Bản quyền thuộc về FreeezeVN. <a href=""><i class="face fa-brands fa-facebook"></i></a> <a href=""><i class="face fa-brands fa-twitter"></i></a> <a href=""><i class=" face fa-brands fa-pinterest"></i></a> </p>
         <a href="#logo"> <img class="top" src="../assets/header/top.png" /></a>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

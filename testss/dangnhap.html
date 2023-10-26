@@ -25,11 +25,17 @@
             <a class="button" href="dangki.html">Đăng Kí</a>
             <a class="button" href="lienhe.html">Liên Hệ</a>
 
-            <div style="margin-left:  70px;" class="input">
-                <input class="input" placeholder="Nhập nội dung cần tìm..."/>
-                <i  class="fa-solid fa-magnifying-glass search"></i>
+            <div style="margin-left:  70px; display: flex;" class="input">
+                <form>
+                    <input class="input" placeholder="Nhập nội dung cần tìm..."/>
+                </form>
+                <div>
+                    <i  class="fa-solid fa-magnifying-glass search"></i>
+                </div>
+               <div>
                 <i class="fa-solid fa-cart-shopping cart"></i>
-    
+               </div>
+                
             </div>
         </nav>
 
@@ -43,16 +49,16 @@
             <img style="margin-left: 250px;width: 200px; height: 200px;" src="./images/dangnhap/userlogin.png" />
             <table style="margin-left: 250px;">
                 <tr >
-                    <td "><label for="id"><i class="lh-address-icon-gy fa-regular fa-user"></i></label></td>
-                    <td><input placeholder="Vui lòng nhập họ tên của bạn"/></td>
+                    <td ><label for="id"><i class="lh-address-icon-gy fa-regular fa-user"></i></label></td>
+                    <td><input id="namelogin" placeholder="Vui lòng nhập họ tên của bạn"/></td>
                 </tr>
                 <tr>
                     <td style="width: 20px;"><label style="width: 20px;"><i class="lh-address-icon-gy fa-regular fa-envelope"></i></label></td>
-                    <td><input name="email" type="text" placeholder="Vui lòng nhập Email"/></td>
+                    <td><input id="emaillogin" name="email" type="text" placeholder="Vui lòng nhập Email"/></td>
                 </tr>
                 <tr >
                     <td><label for="id"><i class="lh-address-icon-gy fa-solid fa-key"></i><label></td>
-                    <td><input name="psw" type="text" placeholder="Vui lòng nhập mật khẩu"/></td>
+                    <td><input id="passwordlogin" name="psw" type="text" placeholder="Vui lòng nhập mật khẩu"/></td>
                 </tr>
             
                 <tr >
@@ -61,7 +67,7 @@
                 
                 <tr >
                     <td style="display: flex;">
-                        <input type="submit" value="Đăng Nhập" method='post' enctype="application/x-www-form-urlencoded"/>
+                        <input onclick="sendInformation()" type="submit" value="Đăng Nhập" method='post' enctype="application/x-www-form-urlencoded"/>
                         <input type="reset" value="Hủy" /> 
                     </td>
                 </tr>
@@ -73,5 +79,6 @@
         <p style="margin-left: 250px;">&copy;2021 Bản quyền thuộc về FreeezeVN. <a href=""><i class="face fa-brands fa-facebook"></i></a> <a href=""><i class="face fa-brands fa-twitter"></i></a> <a href=""><i class=" face fa-brands fa-pinterest"></i></a> </p>
         <a href="#logo"> <img class="top" src="../assets/header/top.png" /></a>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

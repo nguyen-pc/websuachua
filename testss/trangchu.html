@@ -25,11 +25,36 @@
             <a class="button" href="dangki.html">Đăng Kí</a>
             <a class="button" href="lienhe.html">Liên Hệ</a>
 
-            <div style="margin-left:  70px;" class="input">
-                <input class="input" placeholder="Nhập nội dung cần tìm..."/>
-                <i  class="fa-solid fa-magnifying-glass search"></i>
+            <div style="margin-left:  70px; display: flex;" class="input">
+                <form method="GET" action="timkien.html" id="sendform">
+                    <input type="text" id="searchInput" class="input" placeholder="Nhập nội dung cần tìm..."/>
+                
+                <button style="width: 35px;height: 26px;margin-left: 5px; margin-right: 10px; background-color: #cddc39;">
+                    <i style="color: #fff;" class="fa-solid fa-magnifying-glass "></i>
+                </button>
+            </form>
+                <button type="submit" style="width: 35px;height: 26px; background-color: #cddc39;">
+                    <a href="./donhang.html">
+                    <i  style="color: #ed4190;" class="fa-solid fa-cart-shopping "></i>
+                    </a>
+                </button>
+                <!-- <button style=" 
+                    width: 40px;
+                    height: 30px;
+                    margin-right: 10px;
+                    margin-left: 10px;"
+                >
+                    <i  class="fa-solid fa-magnifying-glass search"></i>
+                </button>
+               <button style=" 
+                    width: 40px;
+                    height: 30px;
+                    margin-right: 10px;
+                    margin-left: 10px;"
+                >
                 <i class="fa-solid fa-cart-shopping cart"></i>
-    
+               </button> -->
+                
             </div>
         </nav>
 
@@ -113,5 +138,6 @@
         <p style="margin-left: 250px;">&copy;2021 Bản quyền thuộc về FreeezeVN. <a href=""><i class="face fa-brands fa-facebook"></i></a> <a href=""><i class="face fa-brands fa-twitter"></i></a> <a href=""><i class=" face fa-brands fa-pinterest"></i></a> </p>
         <a href="#logo"> <img class="top" src="../assets/header/top.png" /></a>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

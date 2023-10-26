@@ -25,11 +25,17 @@
             <a class="button" href="dangki.html">Đăng Kí</a>
             <a class="button" href="lienhe.html">Liên Hệ</a>
 
-            <div style="margin-left:  70px;" class="input">
-                <input class="input" placeholder="Nhập nội dung cần tìm..."/>
-                <i  class="fa-solid fa-magnifying-glass search"></i>
-                <i class="fa-solid fa-cart-shopping cart"></i>
-    
+            <div style="margin-left:  70px; display: flex;" class="input">
+                <form>
+                    <input class="input" placeholder="Nhập nội dung cần tìm..."/>
+                </form>
+                <div>
+                    <i  class="fa-solid fa-magnifying-glass search"></i>
+                </div>
+               <div onclick="window.location.href='donhang.html'">
+                <i  class="fa-solid fa-cart-shopping cart"></i>
+               </div>
+                
             </div>
         </nav>
 
@@ -48,8 +54,8 @@
                     <p class="sp_group-text">Hương vị thơm ngon của trái Kiwi xanh, nổi tiếng của đất nước New Zealand có trong Sữa chua vị Kiwi xanh đem đến một món ăn nhẹ Siêu ngon và tốt cho hệ tiêu hóa.<a href="">Xem chi tiết</a ></p>
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
-                        <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <input id="sp001" class="sp_groupparent-input" type="number" max="100" min="0"  value="0" size="3"/>
+                        <button onclick="addCart('sp001')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
                 <section class="sp_group-child">
@@ -62,7 +68,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="showCart()" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
                 <section class="sp_group-child">
@@ -75,7 +81,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="addCart('sp003')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
 
@@ -92,7 +98,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="addCart('sp004')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
                 <section class="sp_group-child">
@@ -105,7 +111,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="addCart('sp005')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
                 <section class="sp_group-child">
@@ -118,7 +124,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="addCart('sp006')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
 
@@ -135,7 +141,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="addCart('sp007')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
                 <section class="sp_group-child">
@@ -148,7 +154,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="addCart('sp008')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
                 <section class="sp_group-child">
@@ -161,7 +167,7 @@
                     <span class="sp_groupparent">
                         <p class="sp_groupparent-num">Số lượng: </p>
                         <input class="sp_groupparent-input" type="number" max="0" min="0"  value="0" size="3"/>
-                        <button class="sp_groupparent-buttom">Đặt hàng</button>
+                        <button onclick="addCart('sp009')" class="sp_groupparent-buttom">Đặt hàng</button>
                     </span>
                 </section>
             </div>
@@ -172,5 +178,6 @@
     <p style="margin-left: 250px;">&copy;2021 Bản quyền thuộc về FreeezeVN. <a href=""><i class="face fa-brands fa-facebook"></i></a> <a href=""><i class="face fa-brands fa-twitter"></i></a> <a href=""><i class=" face fa-brands fa-pinterest"></i></a> </p>
     <a href="#logo"> <img class="top" src="../assets/header/top.png" /></a>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
