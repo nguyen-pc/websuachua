@@ -109,9 +109,9 @@ var itemLists = {
     photo: "./images/sanpham/pineapple.jpg",
   },
 };
-var helo = 10;
+
 function addCart(code) {
-  let valueInput = document.getElementById("sp001");
+  let valueInput = document.getElementById(code);
   console.log(valueInput.value);
   let number = valueInput.value;
 
@@ -177,8 +177,8 @@ function showCart() {
       photo: "./images/sanpham/pineapple.jpg",
     },
   };
-  let TotalPreTax = 0;
-
+  var TotalPreTax = 0;
+  var product = document.getElementById("id_product");
   if (localStorage && itemList) {
     // Kiểm tra xem localStorage và itemList có tồn tại
     for (let key in localStorage) {
@@ -200,45 +200,66 @@ function showCart() {
             orderNumber,
             TotalPreTax
           );
-          var product = document.getElementById("id_product");
+
           var tr1 = document.createElement("tr");
           tr1.id = key;
-          product.appendChild(tr1);
-          var info = document.getElementById(key);
-          var img = document.createElement("img");
-          var td1 = document.createElement("td");
-          var td2 = document.createElement("td");
-          var td3 = document.createElement("td");
-          var td4 = document.createElement("td");
-          var td5 = document.createElement("i");
-          td1.textContent = getname;
-          td2.textContent = orderNumber;
-          td3.textContent = price;
-          td4.textContent = orderNumber * price;
 
-          img.src = photo;
-          img.width = "100";
-          img.height = "100";
-          td5.className = "fa-solid fa-trash";
-          // td5.onclick = removeCart(key);
-          info.appendChild(img);
-          info.appendChild(td1);
-          info.appendChild(td2);
-          info.appendChild(td3);
-          info.appendChild(td4);
-          info.appendChild(td5);
+          var img = document.createElement("td");
+          img.innerHTML = `<img src="${photo}" alt="" width="100px" />`;
+          tr1.appendChild(img);
+
+          var td_name = document.createElement("td");
+          td_name.innerHTML = `<span>${getname}</span>`;
+          tr1.appendChild(td_name);
+
+          var td_orderNumber = document.createElement("td");
+          td_orderNumber.innerHTML = `<span>${orderNumber}</span>`;
+          tr1.appendChild(td_orderNumber);
+
+          var td_price = document.createElement("td");
+          td_price.innerHTML = `<span>${price}</span>`;
+          tr1.appendChild(td_price);
+
+          var td_total = document.createElement("td");
+          td_total.innerHTML = `<span>${price * orderNumber}</span>`;
+          tr1.appendChild(td_total);
+
+          var td_delete = document.createElement("td");
+          td_delete.innerHTML = `<i id="${key}" class="fa-solid fa-trash"><i>`;
+          tr1.appendChild(td_delete);
+
+          product.appendChild(tr1);
+          //Xoa san pham ra gio hang
+
+          td_delete.onclick = function removeCart() {
+            localStorage.removeItem(key);
+            location.reload("donhang.html");
+          };
         }
       }
     }
   }
-  var chietkhau = 0.1 * TotalPreTax;
-  var thue = 0.1 * (TotalPreTax - chietkhau);
+  var chietkhau = getDiscountRate() * TotalPreTax;
+  var thue = getDiscountRate() * (TotalPreTax - chietkhau);
   var tongdon = TotalPreTax - chietkhau + thue;
 
+  console.log(TotalPreTax);
   var td_totalpretax = document.createElement("tr");
+  // td_totalpretax.innerHTML = `<span>${TotalPreTax}</span>`;
+  // product.appendChild(td_totalpretax);
+
   var td_chietkhau = document.createElement("tr");
+  // td_chietkhau.innerHTML = `<span>${chietkhau}</span>`;
+  // product.appendChild(td_chietkhau);
+
   var td_thue = document.createElement("tr");
+  // td_thue.innerHTML = `<span>${thue}</span>`;
+  // product.appendChild(td_thue);
+
   var td_tongtien = document.createElement("tr");
+  // td_tongtien.innerHTML = `<span>${tongdon}</span>`;
+  // product.appendChild(td_tongtien);
+
   td_totalpretax.id = "tda";
   td_chietkhau.id = "tdb";
   td_thue.id = "tdc";
@@ -276,7 +297,8 @@ function removeCart(code) {
   if (typeof window.localStorage[code] != "undefined") {
     window.localStorage.removeItem(code);
 
-    // document.getElementById(code).getElementsByTagName("tr")[0].innerHTML = "";
+    document.getElementById(code).getElementsByTagName("tbody")[0].innerHTML =
+      "";
 
     showCart();
   }
@@ -297,3 +319,7 @@ function getDiscountRate() {
   }
   return 0;
 }
+
+window.onstorage = () => {
+  showCart();
+};
